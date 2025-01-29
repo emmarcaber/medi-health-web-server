@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import PatientDataRouter from "./routers/v1/PatientDataRouter";
 import config from "./helpers/config";
 import UserRouter from "./routers/v1/UserRouter";
@@ -44,7 +44,7 @@ app.use("/v1/api", UserRouter);
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   res.redirect("/api-docs");
 });
 
