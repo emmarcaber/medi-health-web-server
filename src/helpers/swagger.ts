@@ -222,7 +222,7 @@ const swaggerOptions: swaggerJSDoc.Options = {
             },
             doctor: {
               type: "string",
-              description: "ID of the doctor",
+              description: "Name of the doctor",
             },
             date: {
               type: "string",

@@ -10,7 +10,7 @@ import {
   getConsultations,
   getSingleConsultation,
   getConsultationsByPatient,
-  getConsultationsByDoctor,
+  // getConsultationsByDoctor,
   createConsultation,
   updateConsultation,
   deleteConsultation,
@@ -106,36 +106,36 @@ ConsultationRouter.get(
   getConsultationsByPatient
 );
 
-/**
- * @swagger
- * /v1/api/consultations/doctor/{doctorId}:
- *   get:
- *     summary: Retrieve consultations by doctor ID
- *     tags: [Consultations]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: doctorId
- *         schema:
- *           type: string
- *         required: true
- *         description: The doctor ID
- *     responses:
- *       200:
- *         description: A list of consultations for the doctor
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/components/schemas/Consultation'
- */
-ConsultationRouter.get(
-  "/doctor/:doctorId",
-  authenticateToken,
-  getConsultationsByDoctor
-);
+// /**
+//  * @swagger
+//  * /v1/api/consultations/doctor:
+//  *   get:
+//  *     summary: Retrieve consultations by doctor ID
+//  *     tags: [Consultations]
+//  *     security:
+//  *       - bearerAuth: []
+//  *     parameters:
+//  *       - in: path
+//  *         name: doctorId
+//  *         schema:
+//  *           type: string
+//  *         required: true
+//  *         description: The doctor ID
+//  *     responses:
+//  *       200:
+//  *         description: A list of consultations for the doctor
+//  *         content:
+//  *           application/json:
+//  *             schema:
+//  *               type: array
+//  *               items:
+//  *                 $ref: '#/components/schemas/Consultation'
+//  */
+// ConsultationRouter.get(
+//   "/doctor/:doctorId",
+//   authenticateToken,
+//   getConsultationsByDoctor
+// );
 
 /**
  * @swagger

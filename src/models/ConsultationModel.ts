@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 const consultationSchema = new mongoose.Schema(
   {
     doctor: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      type: String,
+      default: "",
     },
     patient: {
       type: mongoose.Schema.Types.ObjectId,
