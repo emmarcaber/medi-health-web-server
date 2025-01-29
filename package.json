@@ -4,9 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev src/routes.ts",
+    "dev": "ts-node-dev src/index.ts",
     "build": "tsc",
-    "start": "node dist/routes.js",
     "seed:superadmin": "ts-node src/seeders/SuperAdminSeeder.ts"
   },
   "keywords": [],
