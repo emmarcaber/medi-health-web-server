@@ -1,4 +1,4 @@
-import mongoose, { Model } from "mongoose";
+import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import config from "../helpers/config";
@@ -67,6 +67,7 @@ userSchema.methods.matchPassword = async function (enteredPassword: string) {
 };
 
 userSchema.methods.generateAccessToken = async function () {
+  // @ts-ignore
   return jwt.sign(
     { _id: this._id, name: this.name, email: this.email, role: this.role },
     config.JWT_TOKEN_SECRET!,
@@ -77,6 +78,7 @@ userSchema.methods.generateAccessToken = async function () {
 };
 
 userSchema.methods.generateRefreshToken = async function () {
+  // @ts-ignore
   const refreshToken = jwt.sign(
     { _id: this._id, email: this.email },
     config.JWT_TOKEN_SECRET!,

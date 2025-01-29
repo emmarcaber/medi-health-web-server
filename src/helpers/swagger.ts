@@ -1,6 +1,6 @@
 import swaggerJSDoc from "swagger-jsdoc";
 
-const swaggerOptions = {
+const swaggerOptions: swaggerJSDoc.Options = {
   definition: {
     openapi: "3.0.0",
     info: {
@@ -134,24 +134,24 @@ const swaggerOptions = {
             },
             role: {
               type: "string",
-              default: null,
+              default: null as string | null,
               description: "Role of the user",
             },
             profilePicture: {
               type: "string",
-              default: null,
+              default: null as string | null,
               description: "URL of the user's profile picture",
             },
             patients: {
               type: "array",
               items: { type: "string" },
-              default: [],
+              default: [] as string[],
               description:
                 "List of patients assigned to the a healthcare professional, if applicable",
             },
             refreshToken: {
               type: "string",
-              default: null,
+              default: null as string | null,
               description: "Refresh token for the user",
             },
             deletedAt: {
@@ -256,7 +256,7 @@ const swaggerOptions = {
     },
     security: [
       {
-        bearerAuth: [],
+        bearerAuth: [] as string[],
       },
     ],
     servers: [
