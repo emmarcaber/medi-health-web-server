@@ -49,5 +49,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.listen(config.PORT, () => {
-  console.log(`Server is running on port ${config.PORT}`);
+  console.log(`Server running on port ${config.PORT}`);
 });
+
+export default app;
