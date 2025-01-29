@@ -48,6 +48,4 @@ app.get("/", (req: Request, res: Response) => {
   res.redirect("/api-docs");
 });
 
-app.listen(config.PORT, () => {
-  console.log(`Server is running on port ${config.PORT}`);
-});
+export default app;
